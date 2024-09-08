@@ -2,8 +2,6 @@ import { useState } from 'react'
 import Header from './components/header/header'
 import Footer from './components/footer/footer'
 import ImgBanner from './components/imgBanner/imgBanner'
-
-import "./css/main.css"
 import FeaturedCard from './components/featuredCard/featuredCard'
 
 function App() {
