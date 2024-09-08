@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import Header from './components/header/header'
+import "./main.css"
 
 function App() {
 
   return (
-    <div>Test</div>
+    <Header/>
   )
 }
 
