@@ -7,7 +7,7 @@ function Header(){
             <NavLink className="main-nav-logo" to="/">
                 <img
                     className="main-nav-logo-image"
-                    src="./src/img/argentBankLogo.png"
+                    src="./src/img/argentBankLogo.webp"
                     alt="Argent Bank Logo"
                 />
             <h1 className="sr-only">Argent Bank</h1>

@@ -22,16 +22,16 @@ function App() {
           <h2 class="sr-only">Features</h2>
           <FeaturedCard
             title="You are our #1 priority"
-            icon="./src/img/icon-chat.png"
+            icon="./src/img/icon-chat.webp"
             content="Need to talk to a representative? You can get in touch through our 24/7 chat or through a phone call in less than 5 minutes."
           />
           <FeaturedCard
             title="More savings means higher rates"
-            icon="./src/img/icon-money.png"
+            icon="./src/img/icon-money.webp"
             content="The more you save with us, the higher your interest rate will be!"
           /><FeaturedCard
           title="Security you can trust"
-          icon="./src/img/icon-security.png"
+          icon="./src/img/icon-security.webp"
           content="We use top of the line encryption to make sure your data and money
             is always safe."
         />
