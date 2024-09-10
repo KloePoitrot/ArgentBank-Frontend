@@ -6,7 +6,17 @@ import App from "./App";
 import Signin from "./pages/signin";
 import UserPage from "./pages/user";
 
+import { Provider } from 'react-redux'
+import { configureStore } from "@reduxjs/toolkit"
+import rootReducer from './reducers'
+
 import "./css/main.css"
+import { logginIn } from "./action/login.action";
+
+const store = configureStore({
+  reducer: rootReducer,
+  devTools: true,
+})
 
 const router = createBrowserRouter([
   {
@@ -24,5 +34,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 );
