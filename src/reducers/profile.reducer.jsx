@@ -1,6 +1,6 @@
 import { GET_PROFILE } from "../action/profile.action"
 
-export const InitialState = { test: "test" }
+export const InitialState = { body: "Please log in" }
 
 function profileReducer(state = InitialState, action) {
     switch (action.type) {

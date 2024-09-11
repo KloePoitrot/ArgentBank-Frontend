@@ -2,6 +2,7 @@ import axios from "axios"
 
 export const LOG_IN = "LOG_IN"
 export const LOG_IN_FAILED = "LOG_IN_FAILED"
+export const LOG_OUT = "LOG_IN_FAILED"
 
 export function logginIn(data) {
     return (dispatch) => {
@@ -11,4 +12,7 @@ export function logginIn(data) {
         })
         .catch((err) => {dispatch({ type: LOG_IN_FAILED })})
     }
+}
+export function loggingOut() {
+    return LOG_OUT
 }

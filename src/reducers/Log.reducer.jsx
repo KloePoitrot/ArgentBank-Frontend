@@ -1,4 +1,4 @@
-import { LOG_IN, LOG_IN_FAILED } from "../action/login.action"
+import { LOG_IN, LOG_IN_FAILED, LOG_OUT } from "../action/login.action"
 
 export const InitialState = { loggedIn: false, token: null }
 
@@ -9,6 +9,9 @@ function logReducer(state = InitialState, action) {
             return state
         case LOG_IN_FAILED:
             state = { loggedIn: false, token: false }
+            return state
+        case LOG_OUT:
+            state = InitialState
             return state
         default:
             return state

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useSelector } from "react-redux"
 import "./header.css"
+import { loggingOut } from "../../action/login.action"
 
 function Header(){
     const token = useSelector((state) => state.logReducer)
@@ -23,7 +24,7 @@ function Header(){
                         <i className="fa fa-user-circle"></i>
                         {user.firstName}
                     </NavLink>
-                    <NavLink className="main-nav-item" to="/signin">
+                    <NavLink className="main-nav-item" onClick={loggingOut()}>
                         <i className="fa fa-sign-out"></i>
                         Sign Out
                     </NavLink>

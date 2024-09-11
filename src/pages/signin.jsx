@@ -24,7 +24,6 @@ function Signin(){
 
     
     if(token.loggedIn === true){
-        console.log(token.token)
         dispatch(getProfile(token.token))
         return(
             <Navigate to="/user" replace />
