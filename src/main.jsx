@@ -11,7 +11,6 @@ import { configureStore } from "@reduxjs/toolkit"
 import rootReducer from './reducers'
 
 import "./css/main.css"
-import { logginIn } from "./action/login.action";
 
 const store = configureStore({
   reducer: rootReducer,
