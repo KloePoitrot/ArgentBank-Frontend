@@ -4,12 +4,12 @@ import { useRef } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { logginIn } from "../action/login.action"
 import { Navigate } from "react-router-dom"
+import { getProfile } from "../action/profile.action"
 
 function Signin(){
     const Login = useRef()
     const dispatch = useDispatch()
-    const user = useSelector((state) => state.logReducer)
-
+    const token = useSelector((state) => state.logReducer)
 
     const handleLogin = async (e) => {
         e.preventDefault()
@@ -23,7 +23,9 @@ function Signin(){
     }
 
     
-    if(user.loggedIn === true){
+    if(token.loggedIn === true){
+        console.log(token.token)
+        dispatch(getProfile(token.token))
         return(
             <Navigate to="/user" replace />
         )
@@ -35,7 +37,7 @@ function Signin(){
                     <section className="sign-in-content">
                         <i className="fa fa-user-circle sign-in-icon"></i>
                         <h1>Sign In</h1>
-                        { user.token === false ? <p class="errorMsg">The username or password is invalid</p> : [] }
+                        { token.token === false ? <p className="errorMsg">The username or password is invalid</p> : [] }
                         
                         <form ref={Login} onSubmit={e => handleLogin(e)}>
                             <div className="input-wrapper">

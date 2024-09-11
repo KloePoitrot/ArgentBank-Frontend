@@ -1,8 +1,8 @@
 import { LOG_IN, LOG_IN_FAILED } from "../action/login.action"
 
-const initialState = { loggedIn: false, token: null }
+export const InitialState = { loggedIn: false, token: null }
 
-function logReducer(state = initialState, action) {
+function logReducer(state = InitialState, action) {
     switch (action.type) {
         case LOG_IN:
             state = { loggedIn: true, token: action.payload.body.token }
