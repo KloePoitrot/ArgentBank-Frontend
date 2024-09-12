@@ -14,7 +14,7 @@ function UserPage(){
             <>
                 <Header/>
                 <main className="main bg-dark">
-                    <UserInfo firstName={user.firstName} lastName={user.lastName}/>
+                    <UserInfo userName={user.userName} firstName={user.firstName} lastName={user.lastName}/>
                     <h2 className="sr-only">Accounts</h2>
                     <AccountInfo 
                         title="Argent Bank Checking (x8349)"

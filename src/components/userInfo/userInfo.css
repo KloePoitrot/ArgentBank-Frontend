@@ -6,7 +6,53 @@
     padding: 10px;
 }
 
-.header {
+.header, .edituser {
     color: #fff;
     margin-bottom: 2rem;
+}
+
+.edituser{
+    max-width:400px;
+    margin:auto;
+    margin-bottom:1rem;
+}
+.edituser_Info {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.edituser_Info label {
+    font-weight: bold;
+    margin:auto 15px;
+}
+
+.edituser_Info input {
+    padding: 5px;
+    font-size: 1.2rem;
+    border: 2px solid #000;
+    background: #fff;
+    color:#000
+}
+
+.edituser_Info input:disabled {
+    background: rgba(255, 255, 255, 0.6);
+    color:rgba(0, 0, 0, 0.4)
+}
+
+.edituser_buttons{
+    display: flex;
+    gap:1rem;
+}
+.edituser_save, .edituser_cancel{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-color: #00bc77;
+    background-color: #00bc77;
+    color: #fff;
 }
