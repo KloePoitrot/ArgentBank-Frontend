@@ -8,7 +8,7 @@ function logReducer(state = InitialState, action) {
             state = { loggedIn: true, token: action.payload.body.token }
             return state
         case LOG_IN_FAILED:
-            state = { loggedIn: false, token: false }
+            state = { loggedIn: "error", token: null }
             return state
         case LOG_OUT:
             state = InitialState

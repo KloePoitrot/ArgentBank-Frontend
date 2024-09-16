@@ -14,5 +14,5 @@ export function logginIn(data) {
     }
 }
 export function loggingOut() {
-    return LOG_OUT
+    return (dispatch) => dispatch({ type: LOG_OUT })
 }

@@ -7,15 +7,10 @@ import Signin from "./pages/signin";
 import UserPage from "./pages/user";
 
 import { Provider } from 'react-redux'
-import { configureStore } from "@reduxjs/toolkit"
-import rootReducer from './reducers'
 
 import "./css/main.css"
-
-const store = configureStore({
-  reducer: rootReducer,
-  devTools: true,
-})
+import { store, persistor } from "./store";
+import { PersistGate } from "redux-persist/integration/react";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +29,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
-    <RouterProvider router={router} />
+    <PersistGate loading={<div>loading...</div>} persistor={persistor}>
+      <RouterProvider router={router} />
+    </PersistGate>
+    
   </Provider>
 );

@@ -36,7 +36,7 @@ function Signin(){
                     <section className="sign-in-content">
                         <i className="fa fa-user-circle sign-in-icon"></i>
                         <h1>Sign In</h1>
-                        { token.token === false ? <p className="errorMsg">The username or password is invalid</p> : [] }
+                        { token.loggedIn === "error" ? <p className="errorMsg">The username or password is invalid</p> : [] }
                         
                         <form ref={Login} onSubmit={e => handleLogin(e)}>
                             <div className="input-wrapper">

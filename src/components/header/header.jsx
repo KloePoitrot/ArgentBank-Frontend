@@ -1,11 +1,17 @@
 import { NavLink } from "react-router-dom"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import "./header.css"
 import { loggingOut } from "../../action/login.action"
 
 function Header(){
     const token = useSelector((state) => state.logReducer)
     const user = useSelector((state) => state.profileReducer)
+    const dispatch = useDispatch()
+
+    const handleLogout = async (e) => {
+        e.preventDefault()
+        dispatch(loggingOut())
+    }
 
     return(
         <nav className="main-nav">
@@ -24,7 +30,7 @@ function Header(){
                         <i className="fa fa-user-circle"></i>
                         {user.userName}
                     </NavLink>
-                    <NavLink className="main-nav-item" onClick={loggingOut()}>
+                    <NavLink className="main-nav-item" onClick={(e) => handleLogout(e)}>
                         <i className="fa fa-sign-out"></i>
                         Sign Out
                     </NavLink>
