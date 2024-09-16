@@ -22,7 +22,7 @@ function Header(){
                 <>
                     <NavLink className="main-nav-item" to="/user">
                         <i className="fa fa-user-circle"></i>
-                        {user.firstName}
+                        {user.userName}
                     </NavLink>
                     <NavLink className="main-nav-item" onClick={loggingOut()}>
                         <i className="fa fa-sign-out"></i>
